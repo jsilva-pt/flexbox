@@ -88,7 +88,7 @@
     <div>
       <h1>Flexbox</h1>
     </div>
-    
+
     <div class="nav">
       <a href="#flex-direction">flex-direction</a>
       <a href="#flex-wrap">flex-wrap</a>
@@ -110,6 +110,8 @@
 
         <h2 id="flex-direction">flex-direction
           <span>column | column-reverse | row | row-reverse</span>
+          <br>
+          <span>default: row</span>
         </h2>
 
         <div>
@@ -154,6 +156,8 @@
 
         <h2 id="flex-wrap">flex-wrap
           <span>nowrap | wrap | wrap-reverse</span>
+          <br>
+          <span>default: nowrap</span>
         </h2>
 
         <h3>nowrap</h3>
@@ -213,25 +217,65 @@
           <div>15</div>
         </div>
 
-        <h2 id="flex-flow">flex-flow</h2>
+        <h2 id="flex-flow">flex-flow
+          <span>flex-direction flex-wrap</span>
+          <br>
+          <span>default: row nowrap</span>
+        </h2>
 
-        <h2 id="justify-content">justify-content</h2>
+        <h2 id="justify-content">justify-content
+          <span>flex-start | flex-end | center | space-between | space-around</span>
+          <br>
+          <span>default: flex-start</span>
+        </h2>
 
-        <h2 id="align-items">align-items</h2>
+        <h2 id="align-items">align-items
+          <span>stretch | flex-start | flex-end | center | baseline</span>
+          <br>
+          <span>default: stretch</span>
+        </h2>
 
-        <h2 id="align-content">align-content</h2>
+        <h2 id="align-content">align-content
+          <span>stretch | flex-start | flex-end | center | space-between | space-around</span>
+          <br>
+          <span>default: stretch</span>
+        </h2>
 
-        <h2 id="order">order</h2>
+        <h2 id="order">order
+          <span>number</span>
+          <br>
+          <span>detault is the source order</span>
+        </h2>
 
-        <h2 id="flex-grow">flex-grow</h2>
+        <h2 id="flex-grow">flex-grow
+          <span>number</span>
+          <br>
+          <span>default: 0</span>
+        </h2>
 
-        <h2 id="flex-shrink">flex-shrink</h2>
+        <h2 id="flex-shrink">flex-shrink
+          <span>number</span>
+          <br>
+          <span>default: 1</span>
+        </h2>
 
-        <h2 id="flex-basis">flex-basis</h2>
+        <h2 id="flex-basis">flex-basis
+          <span>auto | width</span>
+          <br>
+          <span>default: auto</span>
+        </h2>
 
-        <h2 id="flex">flex</h2>
+        <h2 id="flex">flex
+          <span>none | auto | [ flex-grow flex-shrink flex-basis ]</span>
+          <br>
+          <span>default: 0 1 auto</span>
+        </h2>
 
-        <h2 id="align-self">align-self</h2>
+        <h2 id="align-self">align-self
+          <span>auto | flex-start | flex-end | center | baseline | stretch</span>
+          <br>
+          <span>default is the specified in <a href="#align-items">align-items</a></span>
+        </h2>
     </div>
   </body>
 </html>
