@@ -6,7 +6,15 @@
         color: #727272;
       }
 
-      .flex-direction, .flex-wrap {
+      [class^='flex-direction'],
+      [class^='flex-wrap'],
+      [class^='justify-content'],
+      [class^='align-items'],
+      [class^='justify-content'],
+      [class^='align-items'],
+      [class^='align-content'] {
+        display: flex;
+
         border: 1px solid blue;
         margin-top: 16px;
 
@@ -15,58 +23,128 @@
         width: 350px;
       }
 
-      .flex-direction >div, .flex-wrap >div {
+      [class^='flex-direction'] > div,
+      [class^='flex-wrap'] > div,
+      [class^='justify-content'] > div,
+      [class^='align-items'] > div,
+      [class^='justify-content'] > div,
+      [class^='align-items'] > div,
+      [class^='align-content'] > div {
         border: 1px solid orange;
         margin: 1px;
       }
 
-      .row {
-        display: flex;
-        flex-direction: row;
-      }
-
-      .row-reverse {
-        display: flex;
-        flex-direction: row-reverse;
-      }
-
-      .column {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .column-reverse {
-        display: flex;
-        flex-direction: column-reverse;
-      }
-
-      .flex-wrap {
-        display: flex;
-      }
-
-      .flex-wrap >div {
+      [class^='flex-wrap'] > div,
+      [class^='align-content'] > div {
         width: 100px;
       }
 
-      .nowrap {
+      [class^='align-items'] {
+        height: 50px;
+        resize: vertical;
+      }
+
+      [class^='align-content'] {
+        flex-wrap: wrap;
+        height: 150px;
+      }
+
+      .flex-direction_row {
+        flex-direction: row;
+      }
+
+      .flex-direction_row-reverse {
+        flex-direction: row-reverse;
+      }
+
+      .flex-direction_column {
+        flex-direction: column;
+      }
+
+      .flex-direction_column-reverse {
+        flex-direction: column-reverse;
+      }
+
+      .flex-wrap_nowrap {
         flex-wrap: nowrap;
       }
 
-      .wrap {
+      .flex-wrap_wrap {
         flex-wrap: wrap;
       }
 
-      .wrap-reverse {
+      .flex-wrap_wrap-reverse {
         flex-wrap: wrap-reverse;
       }
+
+      .justify-content_flex-start {
+        justify-content: flex-start;
+      }
+
+      .justify-content_flex-end {
+        justify-content: flex-end;
+      }
+
+      .justify-content_center {
+        justify-content: center;
+      }
+
+      .justify-content_space-around {
+        justify-content: space-around;
+      }
+
+      .justify-content_space-between {
+        justify-content: space-between;
+      }
+
+      .align-items_stretch {
+        align-items: stretch;
+      }
+
+      .align-items_flex-start {
+        align-items: flex-start;
+      }
+
+      .align-items_flex-end {
+        align-items: flex-end;
+      }
+
+      .align-items_center {
+        align-items: center;
+      }
+
+      .align-items_baseline {
+        align-items: baseline;
+      }
+
+      .align-content_stretch {
+        align-content: stretch;
+      }
+
+      .align-content_flex-start {
+        align-content: flex-start;
+      }
+
+      .align-content_flex-end {
+        align-content: flex-end;
+      }
+
+      .align-content_center {
+        align-content: center;
+      }
+
+      .align-content_space-between {
+        align-content: space-between;;
+      }
+
+      .align-content_space-around {
+        align-content: space-around;;
+      }
+
 
       h2 span {
         font-size: 14px;
       }
-
-      /*body {
-        display: flex;
-      }*/
 
       .nav {
         position: fixed;
@@ -118,8 +196,8 @@
           <img src="opera-mini_32x32.png" />
         </div>
 
-        <h3>row</h3>
-        <div class="flex-direction row">
+        <h4>row</h4>
+        <div class="flex-direction_row">
           <div>1</div>
           <div>2</div>
           <div>3</div>
@@ -127,8 +205,8 @@
           <div>5</div>
         </div>
 
-        <h3>row-reverse</h3>
-        <div class="flex-direction row-reverse">
+        <h4>row-reverse</h4>
+        <div class="flex-direction_row-reverse">
           <div>1</div>
           <div>2</div>
           <div>3</div>
@@ -136,8 +214,8 @@
           <div>5</div>
         </div>
 
-        <h3>column</h3>
-        <div class="flex-direction column">
+        <h4>column</h4>
+        <div class="flex-direction_column">
           <div>1</div>
           <div>2</div>
           <div>3</div>
@@ -145,8 +223,8 @@
           <div>5</div>
         </div>
 
-        <h3>column-reverse</h3>
-        <div class="flex-direction column-reverse">
+        <h4>column-reverse</h4>
+        <div class="flex-direction_column-reverse">
           <div>1</div>
           <div>2</div>
           <div>3</div>
@@ -160,8 +238,8 @@
           <span>default: nowrap</span>
         </h2>
 
-        <h3>nowrap</h3>
-        <div class="flex-wrap nowrap">
+        <h4>nowrap</h4>
+        <div class="flex-wrap_nowrap">
           <div>1</div>
           <div>2</div>
           <div>3</div>
@@ -179,8 +257,8 @@
           <div>15</div>
         </div>
 
-        <h3>wrap</h3>
-        <div class="flex-wrap wrap">
+        <h4>wrap</h4>
+        <div class="flex-wrap_wrap">
           <div>1</div>
           <div>2</div>
           <div>3</div>
@@ -198,8 +276,8 @@
           <div>15</div>
         </div>
 
-        <h3>wrap-reverse</h3>
-        <div class="flex-wrap wrap-reverse">
+        <h4>wrap-reverse</h4>
+        <div class="flex-wrap_wrap-reverse">
           <div>1</div>
           <div>2</div>
           <div>3</div>
@@ -229,17 +307,191 @@
           <span>default: flex-start</span>
         </h2>
 
+        <h4>flex-start</h4>
+        <div class="justify-content_flex-start">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+        </div>
+
+        <h4>flex-end</h4>
+        <div class="justify-content_flex-end">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+        </div>
+
+        <h4>center</h4>
+        <div class="justify-content_center">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+        </div>
+
+        <h4>space-around</h4>
+        <div class="justify-content_space-around">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+        </div>
+
+        <h4>space-between</h4>
+        <div class="justify-content_space-between">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+        </div>
+
         <h2 id="align-items">align-items
           <span>stretch | flex-start | flex-end | center | baseline</span>
           <br>
           <span>default: stretch</span>
         </h2>
 
+        <h4>items_stretch</h4>
+        <div class="align-items_stretch">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+        </div>
+
+        <h4>flex-start</h4>
+        <div class="align-items_flex-start">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+        </div>
+
+        <h4>flex-end</h4>
+        <div class="align-items_flex-end">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+        </div>
+
+        <h4>center</h4>
+        <div class="align-items_center">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+        </div>
+
+        <h4>baseline</h4>
+        <div class="align-items_baseline">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+        </div>
+
         <h2 id="align-content">align-content
           <span>stretch | flex-start | flex-end | center | space-between | space-around</span>
           <br>
           <span>default: stretch</span>
         </h2>
+
+        <h4>stretch</h4>
+        <div class="align-content_stretch">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+          <div>9</div>
+          <div>10</div>
+        </div>
+
+        <h4>flex-start</h4>
+        <div class="align-content_flex-start">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+          <div>9</div>
+          <div>10</div>
+        </div>
+
+        <h4>flex-end</h4>
+        <div class="align-content_flex-end">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+          <div>9</div>
+          <div>10</div>
+        </div>
+
+        <h4>center</h4>
+        <div class="align-content_center">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+          <div>9</div>
+          <div>10</div>
+        </div>
+
+        <h4>space-between</h4>
+        <div class="align-content_space-between">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+          <div>9</div>
+          <div>10</div>
+        </div>
+
+        <h4>space-around</h4>
+        <div class="align-content_space-around">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+          <div>9</div>
+          <div>10</div>
+        </div>
 
         <h2 id="order">order
           <span>number</span>
