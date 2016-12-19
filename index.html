@@ -12,7 +12,11 @@
       [class^='align-items'],
       [class^='justify-content'],
       [class^='align-items'],
-      [class^='align-content'] {
+      [class^='align-content'],
+      .order,
+      .flex-grow,
+      .flex-shrink,
+      .flex-basis {
         display: flex;
 
         border: 1px solid blue;
@@ -29,13 +33,18 @@
       [class^='align-items'] > div,
       [class^='justify-content'] > div,
       [class^='align-items'] > div,
-      [class^='align-content'] > div {
+      [class^='align-content'] > div,
+      .order > div,
+      .flex-grow > div,
+      .flex-shrink > div,
+      .flex-basis > div {
         border: 1px solid orange;
         margin: 1px;
       }
 
       [class^='flex-wrap'] > div,
-      [class^='align-content'] > div {
+      [class^='align-content'] > div,
+      .flex-shrink > div {
         width: 100px;
       }
 
@@ -144,7 +153,6 @@
       .align-content_space-around {
         align-content: space-around;;
       }
-
 
       h2 span {
         font-size: 14px;
@@ -503,11 +511,43 @@
           <span>detault is the source order</span>
         </h2>
 
+        <div class="order">
+          <div style="order: 1">1</div>
+          <div style="order: 1">2</div>
+          <div style="order: 2">3</div>
+          <div style="order: -1">4</div>
+          <div style="order: 3">5</div>
+        </div>
+
         <h2 id="flex-grow">flex-grow
           <span>number</span>
           <br>
           <span>default: 0</span>
         </h2>
+
+        <div class="flex-grow">
+          <div style="flex-grow: 1">1</div>
+          <div style="flex-grow: 1">2</div>
+          <div style="flex-grow: 1">3</div>
+          <div style="flex-grow: 1">4</div>
+          <div style="flex-grow: 1">5</div>
+        </div>
+
+        <div class="flex-grow">
+          <div style="flex-grow: 1">1</div>
+          <div style="flex-grow: 2">2</div>
+          <div style="flex-grow: 1">3</div>
+          <div style="flex-grow: 1">4</div>
+          <div style="flex-grow: 1">5</div>
+        </div>
+
+        <div class="flex-grow">
+          <div style="flex-grow: 1">1</div>
+          <div style="flex-grow: 3">2</div>
+          <div style="flex-grow: 1">3</div>
+          <div style="flex-grow: 1">4</div>
+          <div style="flex-grow: 4">5</div>
+        </div>
 
         <h2 id="flex-shrink">flex-shrink
           <span>number</span>
@@ -515,11 +555,27 @@
           <span>default: 1</span>
         </h2>
 
+        <div class="flex-shrink">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div style="flex-shrink: 0">4</div>
+          <div>5</div>
+        </div>
+
         <h2 id="flex-basis">flex-basis
           <span>auto | width</span>
           <br>
           <span>default: auto</span>
         </h2>
+
+        <div class="flex-basis">
+          <div style="width: 50px">1</div>
+          <div style="width: 50px">2</div>
+          <div style="width: 50px">3</div>
+          <div style="flex-basis: 200px">4</div>
+          <div style="width: 50px">5</div>
+        </div>
 
         <h2 id="flex">flex
           <span>none | auto | [ flex-grow flex-shrink flex-basis ]</span>
