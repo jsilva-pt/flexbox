@@ -171,6 +171,16 @@
       .content {
         margin-left: 200px;
       }
+
+      .old-browsers {
+        display: flex;
+        align-items: center;
+      }
+
+      .old-browsers > .icon {
+        margin-right: 16px;
+      }
+
     </style>
   </head>
   <body>
@@ -197,12 +207,16 @@
     <div class="content">
 
         <h2>display: flex</h2>
+        <h4>-ms-flexbox</h4>
+
+        <hr>
 
         <h2 id="flex-direction">flex-direction
           <span>column | column-reverse | row | row-reverse</span>
           <br>
           <span>default: row</span>
         </h2>
+        <h4>-ms-flex-direction</h4>
 
         <div>
           <img src="opera-mini_32x32.png" />
@@ -244,11 +258,27 @@
           <div>5</div>
         </div>
 
+        <hr>
+
         <h2 id="flex-wrap">flex-wrap
           <span>nowrap | wrap | wrap-reverse</span>
           <br>
           <span>default: nowrap</span>
         </h2>
+
+        <div class="old-browsers">
+          <div class="icon">
+            <img src="ie_32x32.png" />
+          </div>
+          <div>
+            <h2 id="flex-wrap">
+              -ms-flex-wrap
+              <span>none | wrap | wrap-reverse</span>
+              <br>
+              <span>default: none</span>
+            </h2>
+          </div>
+        </div>
 
         <h4>nowrap</h4>
         <div class="flex-wrap_nowrap">
@@ -307,11 +337,15 @@
           <div>15</div>
         </div>
 
+        <hr>
+
         <h2 id="flex-flow">flex-flow
           <span>flex-direction flex-wrap</span>
           <br>
           <span>default: row nowrap</span>
         </h2>
+
+        <hr>
 
         <h2 id="justify-content">justify-content
           <span>flex-start | flex-end | center | space-between | space-around</span>
@@ -364,11 +398,25 @@
           <div>5</div>
         </div>
 
+        <hr>
+
         <h2 id="align-items">align-items
           <span>stretch | flex-start | flex-end | center | baseline</span>
           <br>
           <span>default: stretch</span>
         </h2>
+        <div class="old-browsers">
+          <div class="icon">
+            <img src="ie_32x32.png" />
+          </div>
+          <div>
+            <h2 id="align-items">-ms-flex-align
+              <span>stretch | start | end | center | baseline</span>
+              <br>
+              <span>default: stretch</span>
+            </h2>
+          </div>
+        </div>
 
         <h4>items_stretch</h4>
         <div class="align-items_stretch">
@@ -414,6 +462,8 @@
           <div>4</div>
           <div>5</div>
         </div>
+
+        <hr>
 
         <h2 id="align-content">align-content
           <span>stretch | flex-start | flex-end | center | space-between | space-around</span>
@@ -505,11 +555,25 @@
           <div>10</div>
         </div>
 
+        <hr>
+
         <h2 id="order">order
           <span>number</span>
           <br>
           <span>detault is the source order</span>
         </h2>
+        <div class="old-browsers">
+          <div class="icon">
+            <img src="ie_32x32.png" />
+          </div>
+          <div>
+            <h2 id="order">-ms-flex-order
+              <span>number</span>
+              <br>
+              <span>integers > 0</span>
+            </h2>
+          </div>
+        </div>
 
         <div class="order">
           <div style="order: 1">1</div>
@@ -518,6 +582,8 @@
           <div style="order: -1">4</div>
           <div style="order: 3">5</div>
         </div>
+
+        <hr>
 
         <h2 id="flex-grow">flex-grow
           <span>number</span>
@@ -549,6 +615,8 @@
           <div style="flex-grow: 4">5</div>
         </div>
 
+        <hr>
+
         <h2 id="flex-shrink">flex-shrink
           <span>number</span>
           <br>
@@ -562,6 +630,8 @@
           <div style="flex-shrink: 0">4</div>
           <div>5</div>
         </div>
+
+        <hr>
 
         <h2 id="flex-basis">flex-basis
           <span>auto | width</span>
@@ -577,11 +647,27 @@
           <div style="width: 50px">5</div>
         </div>
 
+        <hr>
+
         <h2 id="flex">flex
           <span>none | auto | [ flex-grow flex-shrink flex-basis ]</span>
           <br>
           <span>default: 0 1 auto</span>
         </h2>
+        <div class="old-browsers">
+          <div class="icon">
+            <img src="ie_32x32.png" />
+          </div>
+          <div>
+            <h2 id="flex">-ms-flex
+              <span>none | auto | [ flex-grow flex-shrink flex-basis ]</span>
+              <br>
+              <span>default: 0 0 auto</span>
+            </h2>
+          </div>
+        </div>
+
+        <hr>
 
         <h2 id="align-self">align-self
           <span>auto | flex-start | flex-end | center | baseline | stretch</span>
